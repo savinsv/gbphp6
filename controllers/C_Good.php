@@ -4,24 +4,15 @@
 //
 //include_once('models/model.php');
 
-class C_Cart extends C_Base
+class C_Good extends C_Base
 {
 	//
 	// нет конструктора в C_BASE, поэтому убрали конструктор из текущего класса
 	//
-	public $user;
-	function __construct(){
-		$this->user = new M_User();
-		session_start();
-	}
 	
 	public function action_index(){
 		$this->title .= '::Всё, что выбрали - тут...';
-/* 		if ($_SESSION['user_id']){
-			$id = $_SESSION['user_id'];
-			$this->userLogin = ' [ ' .$this->user->getUserLogin($id) . ' ]';
-		}
- */		//$text = text_get();
+		//$text = text_get();
 		$text = "Тут будут товары..";
 		//$today = date();
 		$this->content = $this->Template('views/v_index.php', array('text' => $text));	

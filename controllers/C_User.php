@@ -9,12 +9,12 @@ class C_User extends C_Base
 	//
 	// Конструктор.
 	//
-	public $user;
+/* 	public $user;
 	function __construct(){
 		$this->user = new M_User();
 		session_start();
 	}
-
+ */
 	public function action_index(){
 		if ($_SESSION['user_id']){
 			$this->action_info();
@@ -66,7 +66,9 @@ class C_User extends C_Base
 		}
 	}
 	public function action_info(){
-		$this->title .='::Информация о пользователе';
+	//	echo(parent::getTitle());
+	//	Echo($this->title);
+		$this->title = parent::getTitle() . '::Информация о пользователе';
 		$id = $_SESSION['user_id'];
 		$this->userLogin = ' [ ' .$this->user->getUserLogin($id) . ' ]';
 		$info = $this->user->info($id);
