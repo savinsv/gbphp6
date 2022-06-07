@@ -1,0 +1,97 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: Georgia;
+  font-size: 12px;
+  margin: 0;
+}
+html,
+body {
+  height: 100%;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+.content {
+  flex: 1 0 auto;
+}
+.footer {
+  flex: 0 0 auto;
+}
+
+.btn-link {
+  margin: 10px 20px;
+  display: inline-block;
+  text-decoration: none;
+  padding: 5px 10px;
+  background: #ccc;
+  border: 0px solid #ccc;
+  color: black;
+  border-radius: 3px;
+  width: 120px;
+  text-align: center;
+  box-sizing: content-box;
+  height: 15px;
+}
+
+.btn-link:hover {
+  color: #f00;
+  border-color: #f00;
+  outline: 0.2px solid #f00;
+}
+.menu {
+  font-size: 1.2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+a {
+  color: #0c0c95;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #f00;
+}
+.fields {
+  display: flex;
+}
+.input-field {
+  display: flex;
+  flex-direction: column;
+  margin: 5px 10px;
+}
+textarea {
+  width: 100%;
+  height: 300px;
+}
+
+#header {
+  padding: 10px;
+  background: #eee;
+}
+
+#menu {
+  padding: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  background: #ccc;
+}
+
+#content {
+  margin: 5px;
+  padding: 10px;
+  border: 1px dotted #999;
+}
+
+#footer {
+  padding: 10px;
+  background: #ccc;
+}
