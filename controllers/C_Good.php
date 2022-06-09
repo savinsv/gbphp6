@@ -17,7 +17,6 @@ class C_Good extends C_Base
 		//$today = date();
 		$this->content = $this->Template('views/v_index.php', array('text' => $text));	
 	}
-	
     
 	public function action_edit(){
 		$this->title .= '::Редактирование';

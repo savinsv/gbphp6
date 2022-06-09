@@ -66,9 +66,11 @@ class C_User extends C_Base
 		}
 	}
 	public function action_info(){
-	//	echo(parent::getTitle());
+		//echo(parent::getTitle());
+		//print_r(explode("::",parent::getTitle()),true);
 	//	Echo($this->title);
-		$this->title = parent::getTitle() . '::Информация о пользователе';
+//		$this->title = parent::getTitle() . '::Информация о пользователе';
+		$this->title = (explode("::",parent::getTitle()))[0] . '::Информация о пользователе';
 		$id = $_SESSION['user_id'];
 		$this->userLogin = ' [ ' .$this->user->getUserLogin($id) . ' ]';
 		$info = $this->user->info($id);

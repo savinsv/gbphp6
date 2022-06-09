@@ -16,13 +16,13 @@ class C_Cart extends C_Base
 	}
 	
 	public function action_index(){
-		$this->title .= '::Всё, что выбрали - тут...';
+		$this->title .= '::Ваши покупки...';
 /* 		if ($_SESSION['user_id']){
 			$id = $_SESSION['user_id'];
 			$this->userLogin = ' [ ' .$this->user->getUserLogin($id) . ' ]';
 		}
  */		//$text = text_get();
-		$text = "Тут будут товары..";
+		$text = "Тут будут товары, выбранные покупателем...";
 		//$today = date();
 		$this->content = $this->Template('views/v_index.php', array('text' => $text));	
 	}
